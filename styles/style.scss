@@ -1,7 +1,135 @@
+//imports
+@import "fonts/font.scss";
+@import "var.scss";
+
 * {
   box-sizing: border-box;
 }
 
+body {
+  color: $colorTextBlack;
+  font-size: 18px;
+  font-family: "Golos Text";
+  font-weight: 400;
+  line-height: 23.4px;
+  font-style: normal;
+}
+
 img {
   max-width: 100%;
+}
+
+h1,
+h2 {
+  font-family: "Merriweather";
+  font-size: 36px;
+  line-height: 39.6px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+}
+
+//button
+.button {
+  display: flex;
+  width: 100%;
+  padding: 18px 20px;
+  font-family: "Golos Text";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.8px;
+  border: none;
+  border-radius: 66px;
+  background: $colorButtonBlack;
+  color: $colorWhite;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background: $colorWhite;
+    color: $colorButtonBlack;
+  }
+
+  &_white {
+    background: $colorWhite;
+    color: $colorButtonBlack;
+
+    &:hover {
+      background: $colorButtonBlack;
+      color: $colorWhite;
+    }
+  }
+}
+
+//container
+.container {
+  margin: 0 auto;
+  min-width: 375px;
+  padding: 0 20px;
+}
+
+//logo
+.logo {
+  &_mobile {
+    width: 213px;
+  }
+}
+
+//header
+.header {
+  &__wrapper {
+    background: url("/img/header-wrapper_bg.png") #e9ded4 no-repeat;
+    background-size: 220%;
+    background-position: 82% 97%;
+    position: relative;
+  }
+
+  &__inner {
+    padding-top: 18px;
+    padding-bottom: 330px;
+  }
+
+  &__title {
+    margin-top: 40px;
+  }
+
+  &__title-rows {
+    &_1 {
+      text-align: start;
+    }
+    &_2 {
+      text-align: center;
+    }
+    &_3 {
+      text-align: end;
+    }
+  }
+
+  &__text {
+    margin-top: 24px;
+  }
+
+  &__button-support {
+    margin-top: 32px;
+  }
+
+  &__button-more-info {
+    margin-top: 14px;
+    opacity: 0.95;
+  }
+
+  &__ticker {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: "Merriweather";
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 17.6px;
+    padding: 10px 0;
+    background: $colorRed;
+    color: $colorWhite;
+  }
 }

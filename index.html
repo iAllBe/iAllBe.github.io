@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/styles/normalize.css" />
     <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="styles/fonts/font.css" />
   </head>
   <body>
     <header class="header">
@@ -15,23 +16,32 @@
             <img
               src="/img/logo_mobile.png"
               alt="site-logo"
-              class="logo_mobile"
+              class="logo logo_mobile"
             />
             <div class="header__title">
-              <div class="header__title-row-1">Превратите уездный город</div>
-              <div class="header__title-row-2">в столицу</div>
-              <div class="header__title-row-3">земного шара</div>
+              <h1 class="header__title-rows header__title-rows_1">
+                Превратите уездный город
+              </h1>
+              <h1 class="header__title-rows header__title-rows_2">в столицу</h1>
+              <h1 class="header__title-rows header__title-rows_3">
+                земного шара
+              </h1>
             </div>
             <div class="header__text">
-              Оплатите взнос на телеграммы для организации Международного
-              васюкинского турнира по шахматам
+              Оплатите взнос на телеграммы для организации Международного
+              васюкинского турнира по шахматам
             </div>
-            <button class="header__button-support">
+            <button class="button header__button-support">
               Поддержать шахматную мысль
             </button>
-            <button class="header__button-more-info">
-              Подробнее о турнире
+            <button class="button button_white header__button-more-info">
+              Подробнее о турнире
             </button>
+            <marquee class="header__ticker" direction="left" scrollamount="10"
+              >Дело помощи утопающим — дело рук самих утопающих! &#183; Шахматы
+              двигают вперед не только культуру, но и экономику! &#183; Лед
+              тронулся, господа присяжные заседатели! &#183;
+            </marquee>
           </div>
         </div>
       </div>
