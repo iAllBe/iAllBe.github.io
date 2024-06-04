@@ -19,14 +19,46 @@ img {
   max-width: 100%;
 }
 
+//titles
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Merriweather";
-  font-size: 36px;
-  line-height: 39.6px;
   text-transform: uppercase;
   font-weight: 400;
   margin: 0;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 39.6px;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 37.8px;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 37.8px;
+}
+
+@media (min-width: 1366px) {
+  h1 {
+    font-size: 60px;
+    line-height: 66px;
+  }
+
+  h2 {
+    font-size: 54px;
+    line-height: 64.8px;
+  }
+
+  h3 {
+    font-size: 36px;
+    line-height: 48.6px;
+  }
 }
 
 //button
@@ -47,7 +79,7 @@ h2 {
   transition: all 0.2s;
 
   &:hover {
-    background: $colorWhite;
+    background: $colorYellow;
     color: $colorButtonBlack;
   }
 
@@ -62,11 +94,26 @@ h2 {
   }
 }
 
+@media (min-width: 1366px) {
+  .button {
+    &_white {
+      background-color: inherit;
+      border: 2px solid $colorButtonBlack;
+    }
+  }
+}
+
 //container
 .container {
   margin: 0 auto;
-  min-width: 375px;
+  max-width: 375px;
   padding: 0 20px;
+}
+
+@media (min-width: 1366px) {
+  .container {
+    max-width: 1222px;
+  }
 }
 
 //logo
@@ -74,14 +121,31 @@ h2 {
   &_mobile {
     width: 213px;
   }
+
+  &_desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 1366px) {
+  .logo {
+    &_mobile {
+      display: none;
+    }
+
+    &_desktop {
+      display: block;
+      width: 245px;
+    }
+  }
 }
 
 //header
 .header {
   &__wrapper {
     background: url("/img/header-wrapper_bg.png") #e9ded4 no-repeat;
-    background-size: 220%;
-    background-position: 82% 97%;
+    background-size: 230%;
+    background-position: 80% 97%;
     position: relative;
   }
 
@@ -110,13 +174,13 @@ h2 {
     margin-top: 24px;
   }
 
-  &__button-support {
+  &__buttons {
     margin-top: 32px;
   }
 
   &__button-more-info {
     margin-top: 14px;
-    opacity: 0.95;
+    opacity: 0.9;
   }
 
   &__ticker {
@@ -131,5 +195,109 @@ h2 {
     padding: 10px 0;
     background: $colorRed;
     color: $colorWhite;
+  }
+}
+
+@media (min-width: 500px) {
+  .header {
+    &__wrapper {
+      background-size: contain;
+    }
+  }
+}
+
+@media (min-width: 1366px) {
+  .header {
+    &__wrapper {
+      background-position: 80% 78%;
+    }
+    &__inner {
+      padding-top: 26px;
+      padding-bottom: 190px;
+      width: 542px;
+    }
+
+    &__title {
+      margin-top: 62px;
+    }
+
+    &__text {
+      text-align: center;
+    }
+
+    &__buttons {
+      display: flex;
+      gap: 16px;
+      margin-top: 40px;
+      align-items: center;
+    }
+
+    &__button-support {
+      padding: 20px 45px;
+    }
+
+    &__button-more-info {
+      margin-top: 0;
+      padding: 20px 50px;
+    }
+
+    &__ticker {
+      padding: 18px 0;
+      font-size: 22px;
+      line-height: 24.2px;
+    }
+  }
+}
+
+//tournment
+.tornment {
+  &__inner {
+    padding-top: 48px;
+  }
+
+  &__image {
+    margin-top: 24px;
+  }
+
+  &__lecture {
+    margin-top: 24px;
+  }
+
+  &__accent {
+    color: $colorRed;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 1366px) {
+  .tornment {
+    &__inner {
+      padding-top: 48px;
+      padding-bottom: 30px;
+      display: grid;
+      grid-template-columns: 750px 1fr 394px;
+      grid-template-rows: 55% 45%;
+    }
+
+    &__title {
+      grid-column: 1;
+      grid-row: 1;
+      display: flex;
+      align-items: end;
+    }
+
+    &__image {
+      grid-column: 3;
+      grid-row: 1 / 3;
+      margin: 0;
+      display: flex;
+      align-self: center;
+    }
+
+    &__lecture {
+      grid-column: 1;
+      grid-row: 2;
+      margin: 0;
+    }
   }
 }
