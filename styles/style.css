@@ -6,6 +6,12 @@
 }
 @font-face {
   font-family: "Golos Text";
+  font-weight: 600;
+  font-style: normal;
+  src: url("GolosText-SemiBold.woff2") format("woff2"), url("GolosText-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Golos Text";
   font-weight: 500;
   font-style: normal;
   src: url("GolosText-Medium.woff2") format("woff2"), url("GolosText-Medium.woff") format("woff");
@@ -43,12 +49,27 @@ body {
   font-size: 18px;
   font-family: "Golos Text";
   font-weight: 400;
-  line-height: 23.4px;
+  line-height: 130%; /* 23.4px */
   font-style: normal;
 }
 
 img {
   max-width: 100%;
+}
+
+.text-accent {
+  color: #f54932;
+  font-weight: 700;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+  text-decoration-color: #f54932;
+}
+
+.text-reference {
+  color: #3057a2;
+  line-height: 120%; /* 21.6px */
 }
 
 h1,
@@ -62,31 +83,31 @@ h3 {
 
 h1 {
   font-size: 36px;
-  line-height: 39.6px;
+  line-height: 110%; /* 39.6px */
 }
 
 h2 {
   font-size: 28px;
-  line-height: 37.8px;
+  line-height: 135%; /* 37.8px */
 }
 
 h3 {
   font-size: 28px;
-  line-height: 37.8px;
+  line-height: 135%; /* 37.8px */
 }
 
 @media (min-width: 1366px) {
   h1 {
     font-size: 60px;
-    line-height: 66px;
+    line-height: 110%; /* 66px */
   }
   h2 {
     font-size: 54px;
-    line-height: 64.8px;
+    line-height: 120%; /* 64.8px */
   }
   h3 {
     font-size: 36px;
-    line-height: 48.6px;
+    line-height: 135%; /* 48.6px */
   }
 }
 .button {
@@ -96,7 +117,7 @@ h3 {
   font-family: "Golos Text";
   font-size: 16px;
   font-weight: 500;
-  line-height: 20.8px;
+  line-height: 130%; /* 20.8px */
   border: none;
   border-radius: 66px;
   background: #1f1f1f;
@@ -191,7 +212,7 @@ h3 {
   font-family: "Merriweather";
   font-size: 16px;
   text-transform: uppercase;
-  line-height: 17.6px;
+  line-height: 110%; /* 17.6px */
   padding: 10px 0;
   background: #f54932;
   color: #fff;
@@ -233,7 +254,7 @@ h3 {
   .header__ticker {
     padding: 18px 0;
     font-size: 22px;
-    line-height: 24.2px;
+    line-height: 110%; /* 24.2px */
   }
 }
 .tornment__inner {
@@ -244,10 +265,6 @@ h3 {
 }
 .tornment__lecture {
   margin-top: 24px;
-}
-.tornment__accent {
-  color: #f54932;
-  font-weight: 700;
 }
 
 @media (min-width: 1366px) {
@@ -275,5 +292,78 @@ h3 {
     grid-column: 1;
     grid-row: 2;
     margin: 0;
+  }
+}
+.game__inner {
+  padding-top: 20px;
+}
+.game__title {
+  padding-top: 20px;
+}
+.game__about {
+  padding-top: 45px;
+}
+.game__cell:not(:first-child) {
+  border-top: 2px solid #d6d6d6;
+  padding-top: 16px;
+}
+.game__label {
+  font-size: 20px;
+  line-height: 120%; /* 24px */
+  color: #6f6f6f;
+}
+.game__info {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%; /* 24px */
+  padding-top: 12px;
+  padding-bottom: 16px;
+}
+.game__administration {
+  margin-top: 40px;
+}
+
+@media (min-width: 1366px) {
+  .game__inner {
+    height: 518px;
+    display: grid;
+    grid-template-columns: 1fr 15px 704px;
+    grid-template-rows: 147px 1fr 1fr 1fr 24px;
+  }
+  .game__image {
+    grid-column: 1;
+    grid-row: 1/6;
+  }
+  .game__title {
+    grid-column: 3;
+    grid-row: 1/2;
+    padding-top: 0;
+  }
+  .game__about {
+    grid-column: 3;
+    grid-row: 3/4;
+    padding-top: 0;
+  }
+  .game__administration {
+    grid-column: 3;
+    grid-row: 5/6;
+    margin-top: 0;
+  }
+  .game__cell {
+    display: flex;
+    padding-top: 0;
+  }
+  .game__cell:not(:first-child) {
+    padding-top: 0;
+  }
+  .game__label {
+    width: 50%;
+    align-self: center;
+  }
+  .game__info {
+    width: 50%;
+    border-left: 2px solid #d6d6d6;
+    align-self: center;
+    padding-left: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
