@@ -44,7 +44,10 @@
                 Подробнее о турнире
               </button>
             </div>
-            <marquee class="header__ticker" direction="left" scrollamount="10"
+            <marquee
+              class="header__ticker ticker"
+              direction="left"
+              scrollamount="10"
               >Дело помощи утопающим — дело рук самих утопающих! &#183; Шахматы
               двигают вперед не только культуру, но и экономику! &#183; Лед
               тронулся, господа присяжные заседатели!
@@ -214,8 +217,12 @@
                     </div>
                   </div>
                   <div class="slider__control">
-                    <button class="slider__prev button button_round"></button>
-                    <button class="slider__next button button_round"></button>
+                    <button
+                      class="slider__prev button button_round button_prev"
+                    ></button>
+                    <button
+                      class="slider__next button button_round button_next"
+                    ></button>
                   </div>
                 </div>
               </div>
@@ -231,19 +238,142 @@
             <h2 class="party__titile">Участники турнира</h2>
             <div class="party__slider">
               <div class="slider-party">
-                <div class="slider-party__slide">
-                  <img
-                    src="img/party-item.png"
-                    alt="party-item"
-                    class="slider-party"
-                  />
+                <div class="slider-party__slide-group">
+                  <div class="slider-party__slide">
+                    <div class="slider-party__image-wrapper">
+                      <div class="slider-party__image-inner">
+                        <img
+                          src="img/party-item.png"
+                          alt="party-item"
+                          class="slider-party__image"
+                        />
+                      </div>
+                    </div>
+                    <div class="slider-party__title">Хозе-Рауль Капабланка</div>
+                    <div class="slider-party__status">
+                      Чемпион мира по шахматам
+                    </div>
+                    <button class="slider-party__about button button_reference">
+                      Подробнее
+                    </button>
+                  </div>
+                  <div class="slider-party__slide">
+                    <div class="slider-party__image-wrapper">
+                      <div class="slider-party__image-inner">
+                        <img
+                          src="img/party-item.png"
+                          alt="party-item"
+                          class="slider-party__image"
+                        />
+                      </div>
+                    </div>
+                    <div class="slider-party__title">Эммануил Ласкер</div>
+                    <div class="slider-party__status">
+                      Чемпион мира по шахматам
+                    </div>
+                    <button class="slider-party__about button button_reference">
+                      Подробнее
+                    </button>
+                  </div>
+                  <div class="slider-party__slide">
+                    <div class="slider-party__image-wrapper">
+                      <div class="slider-party__image-inner">
+                        <img
+                          src="img/party-item.png"
+                          alt="party-item"
+                          class="slider-party__image"
+                        />
+                      </div>
+                    </div>
+                    <div class="slider-party__title">Александр Алехин</div>
+                    <div class="slider-party__status">
+                      Чемпион мира по шахматам
+                    </div>
+                    <button class="slider-party__about button button_reference">
+                      Подробнее
+                    </button>
+                  </div>
+                </div>
+                <div class="slider-party__slide-group">
+                  <div class="slider-party__slide">
+                    <div class="slider-party__image-wrapper">
+                      <div class="slider-party__image-inner">
+                        <img
+                          src="img/party-item.png"
+                          alt="party-item"
+                          class="slider-party__image"
+                        />
+                      </div>
+                    </div>
+                    <div class="slider-party__title">Арон Нимцович</div>
+                    <div class="slider-party__status">
+                      Чемпион мира по шахматам
+                    </div>
+                    <button class="slider-party__about button button_reference">
+                      Подробнее
+                    </button>
+                  </div>
+                  <div class="slider-party__slide">
+                    <div class="slider-party__image-wrapper">
+                      <div class="slider-party__image-inner">
+                        <img
+                          src="img/party-item.png"
+                          alt="party-item"
+                          class="slider-party__image"
+                        />
+                      </div>
+                    </div>
+                    <div class="slider-party__title">Рихард Рети</div>
+                    <div class="slider-party__status">
+                      Чемпион мира по шахматам
+                    </div>
+                    <button class="slider-party__about button button_reference">
+                      Подробнее
+                    </button>
+                  </div>
+                  <div class="slider-party__slide">
+                    <div class="slider-party__image-wrapper">
+                      <div class="slider-party__image-inner">
+                        <img
+                          src="img/party-item.png"
+                          alt="party-item"
+                          class="slider-party__image"
+                        />
+                      </div>
+                    </div>
+                    <div class="slider-party__title">Остап Бендер</div>
+                    <div class="slider-party__status">
+                      Чемпион мира по шахматам
+                    </div>
+                    <button class="slider-party__about button button_reference">
+                      Подробнее
+                    </button>
+                  </div>
+                </div>
+
+                <div class="slider-party__control">
+                  <button
+                    class="slider-party__prev button button_round button_prev"
+                  ></button>
+                  <button
+                    class="slider-party__next button button_round button_next"
+                  ></button>
                 </div>
               </div>
             </div>
+            <marquee
+              class="party__ticker ticker"
+              direction="left"
+              scrollamount="10"
+              >Дело помощи утопающим — дело рук самих утопающих! &#183; Шахматы
+              двигают вперед не только культуру, но и экономику! &#183; Лед
+              тронулся, господа присяжные заседатели!
+            </marquee>
           </div>
         </div>
       </div>
     </section>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/sliderParty.js"></script>
   </body>
 </html>

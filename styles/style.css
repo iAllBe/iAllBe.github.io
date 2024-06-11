@@ -86,14 +86,10 @@ h3 {
   margin: 0;
 }
 
-h1 {
+h1,
+h2 {
   font-size: 36px;
   line-height: 110%; /* 39.6px */
-}
-
-h2 {
-  font-size: 28px;
-  line-height: 135%; /* 37.8px */
 }
 
 h3 {
@@ -125,7 +121,7 @@ h3 {
   line-height: 130%; /* 20.8px */
   border: none;
   border-radius: 66px;
-  background: #1f1f1f;
+  background-color: #1f1f1f;
   color: #fff;
   justify-content: center;
   cursor: pointer;
@@ -136,7 +132,7 @@ h3 {
   color: #1f1f1f;
 }
 .button_white {
-  background: #fff;
+  background-color: #fff;
   color: #1f1f1f;
 }
 .button_white:hover {
@@ -148,6 +144,35 @@ h3 {
   width: 36px;
   height: 36px;
   padding: 0;
+}
+.button_prev {
+  background-image: url("../img/arrow-left_white.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+.button_next {
+  background-image: url("../img/arrow-right_white.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+.button_reference {
+  padding: 12px;
+  margin: 0 auto;
+  width: auto;
+  color: #3057a2;
+  border-radius: 62px;
+  border: 1px solid #3057a2;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%; /* 19.2px */
+  transition: all 0.2s;
+}
+.button_reference:hover {
+  color: #fff;
+  background-color: #3057a2;
 }
 
 @media (min-width: 1366px) {
@@ -182,6 +207,23 @@ h3 {
   .logo_desktop {
     display: block;
     width: 245px;
+  }
+}
+.ticker {
+  font-family: "Merriweather";
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 110%; /* 17.6px */
+  padding: 10px 0;
+  background: #f54932;
+  color: #fff;
+}
+
+@media (min-width: 1366px) {
+  .ticker {
+    padding: 18px 0;
+    font-size: 22px;
+    line-height: 110%; /* 24.2px */
   }
 }
 .header__wrapper {
@@ -221,13 +263,6 @@ h3 {
   bottom: 0;
   left: 0;
   right: 0;
-  font-family: "Merriweather";
-  font-size: 16px;
-  text-transform: uppercase;
-  line-height: 110%; /* 17.6px */
-  padding: 10px 0;
-  background: #f54932;
-  color: #fff;
 }
 
 @media (min-width: 500px) {
@@ -262,11 +297,6 @@ h3 {
   .header__button-more-info {
     margin-top: 0;
     padding: 20px 50px;
-  }
-  .header__ticker {
-    padding: 18px 0;
-    font-size: 22px;
-    line-height: 110%; /* 24.2px */
   }
 }
 .tornment__inner {
@@ -462,18 +492,6 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
-.slider__prev {
-  background-image: url("../img/arrow-left_white.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 10px;
-}
-.slider__next {
-  background-image: url("../img/arrow-right_white.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 10px;
-}
 
 @media (min-width: 1366px) {
   .slider__inner {
@@ -517,4 +535,62 @@ h3 {
     padding: 20px 50px 20px 20px;
     min-width: 394px;
   }
+}
+.party {
+  position: relative;
+}
+.party__inner {
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+.party__slider {
+  margin-top: 40px;
+}
+.party__ticker {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.slider-party {
+  text-align: center;
+}
+.slider-party__image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.slider-party__image-inner {
+  width: 244px;
+  height: 244px;
+  background-color: #cdc1ae;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  border-radius: 50%;
+}
+.slider-party__image {
+  width: 223px;
+  border-radius: 50%;
+}
+.slider-party__title {
+  margin-top: 22px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 120%; /* 28.8px */
+}
+.slider-party__status {
+  margin-top: 6px;
+  font-size: 20px;
+  line-height: 120%; /* 24px */
+  color: #6f6f6f;
+}
+.slider-party__about {
+  margin-top: 20px;
+}
+.slider-party__control {
+  width: 129px;
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */
