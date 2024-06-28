@@ -232,7 +232,7 @@ h3 {
   }
 }
 .header__wrapper {
-  background: url("/img/header-wrapper_bg.png") #e9ded4 no-repeat;
+  background: url("../img/header-wrapper_bg.png") #e9ded4 no-repeat;
   background-size: 230%;
   background-position: 80% 97%;
   position: relative;
