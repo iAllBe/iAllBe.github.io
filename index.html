@@ -13,16 +13,18 @@
       <div class="header__wrapper">
         <div class="container">
           <div class="header__inner">
-            <img
-              src="/img/logo_mobile.png"
-              alt="site-logo"
-              class="logo logo_mobile"
-            />
-            <img
-              src="/img/logo_desktop.png"
-              alt="site-logo"
-              class="logo logo_desktop"
-            />
+            <a href="/">
+              <img
+                src="/img/logo_mobile.png"
+                alt="site-logo"
+                class="logo logo_mobile"
+              />
+              <img
+                src="/img/logo_desktop.png"
+                alt="site-logo"
+                class="logo logo_desktop"
+              />
+            </a>
             <div class="header__title">
               <h1 class="header__title-rows header__title-rows_1">
                 Превратите уездный город
@@ -37,12 +39,15 @@
               васюкинского турнира по шахматам
             </div>
             <div class="header__buttons">
-              <button class="button header__button-support">
+              <a class="button header__button-support" href="#tornment">
                 Поддержать шахматную мысль
-              </button>
-              <button class="button button_white header__button-more-info">
+              </a>
+              <a
+                class="button button_white header__button-more-info"
+                href="#about"
+              >
                 Подробнее о турнире
-              </button>
+              </a>
             </div>
             <marquee
               class="header__ticker ticker"
@@ -56,7 +61,7 @@
         </div>
       </div>
     </header>
-    <main class="tornment">
+    <main class="tornment" id="tornment">
       <div class="tornment__wrapper">
         <div class="container">
           <div class="tornment__inner">
@@ -92,7 +97,7 @@
               >
               гроссмейстера О. Бендера
             </h3>
-            <div class="game__about">
+            <div class="game__about" id="about">
               <div class="game__cell">
                 <div class="game__label">Место проведения:</div>
                 <div class="game__info">Клуб «Картонажник»</div>
@@ -116,9 +121,9 @@
                 </div>
               </div>
             </div>
-            <div class="game__administration text-reference">
+            <a class="game__administration text-reference" href="/">
               По всем вопросам обращаться в администрацию к К. Михельсону
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -361,18 +366,29 @@
                 </div>
               </div>
             </div>
-            <marquee
-              class="party__ticker ticker"
-              direction="left"
-              scrollamount="10"
-              >Дело помощи утопающим — дело рук самих утопающих! &#183; Шахматы
-              двигают вперед не только культуру, но и экономику! &#183; Лед
-              тронулся, господа присяжные заседатели!
-            </marquee>
+          </div>
+        </div>
+        <marquee class="party__ticker ticker" direction="left" scrollamount="10"
+          >Дело помощи утопающим — дело рук самих утопающих! &#183; Шахматы
+          двигают вперед не только культуру, но и экономику! &#183; Лед
+          тронулся, господа присяжные заседатели!
+        </marquee>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__text">
+              Все персонажи, события и цитаты являются вымышленными
+              и не принадлежат создателям сайта. С подробностями можно
+              познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова
+              «Двенадцать стульев».
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </footer>
     <script src="scripts/siteSliders.js"></script>
   </body>
 </html>

@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   color: $colorTextBlack;
   font-size: 18px;
@@ -95,6 +99,7 @@ h3 {
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s;
+  text-align: center;
 
   &:hover {
     background-color: $colorYellow;
@@ -398,6 +403,11 @@ h3 {
 
   &__administration {
     margin-top: 40px;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.03);
+    }
   }
 }
 
@@ -475,6 +485,11 @@ h3 {
   &__airplane {
     position: absolute;
     top: 20px;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -624,7 +639,7 @@ h3 {
 .party {
   position: relative;
   &__inner {
-    padding-top: 120px;
+    margin-top: 120px;
     padding-bottom: 100px;
   }
 
@@ -637,6 +652,18 @@ h3 {
     bottom: 0;
     left: 0;
     right: 0;
+  }
+}
+
+@media (min-width: 1366px) {
+  .party {
+    &__inner {
+      position: relative;
+    }
+
+    &__slider {
+      margin-top: 60px;
+    }
   }
 }
 
@@ -656,7 +683,13 @@ h3 {
     justify-content: center;
     align-items: end;
     border-radius: 50%;
+    transition: all 0.2s;
+
+    &:hover {
+      scale: (1.1);
+    }
   }
+
   &__image {
     width: 223px;
     border-radius: 50%;
@@ -685,5 +718,45 @@ h3 {
     margin: 40px auto 0;
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: 1366px) {
+  .slider-party {
+    &__control {
+      margin-top: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &__slide-group {
+      justify-content: space-around;
+    }
+  }
+}
+
+//footer
+.footer {
+  &__wrapper {
+    background-color: $colorPinkLite;
+  }
+  &__inner {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  &__text {
+    color: $colorGreyLite;
+    font-size: 16px;
+    line-height: 120%; /* 19.2px */
+  }
+}
+
+@media (min-width: 1366px) {
+  .footer {
+    &__inner {
+      padding-bottom: 72px;
+    }
   }
 }

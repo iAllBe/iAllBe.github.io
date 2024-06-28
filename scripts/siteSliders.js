@@ -1,4 +1,4 @@
-//   ---Слайдер с этапами---
+//---СЛАЙДЕР С ЭТАПАМИ---
 // Получаем элементы слайдера
 const sliderStage = document.querySelector(".slider");
 const prevButtonStage = document.querySelector(".slider__prev");
@@ -64,7 +64,7 @@ window.addEventListener("resize", (e) => {
   transformSliderStage();
 });
 
-//   ---Слайдер с участниками---
+//---СЛАЙДЕР С УЧАСТНИКАМИ МОБИЛЬНЫЙ---
 // Получаем элементы слайдера
 const sliderParty = document.querySelector(".slider-party");
 const prevButtonParty = document.querySelector(".slider-party__prev");
@@ -75,30 +75,34 @@ const slidesParty = Array.from(
 const slideCountParty = slidesParty.length;
 let slideIndexParty = 0;
 
-const slidesPartyGroup = Array.from(
-  sliderParty.querySelectorAll(".slider-party__slide-group")
-);
-const slideCountPartyGroup = slidesPartyGroup.length;
-let slideIndexPartyGroup = 0;
-
-// Устанавливаем обработчики событий для кнопок
-prevButtonParty.addEventListener("click", showPreviousSlideParty);
-nextButtonParty.addEventListener("click", showNextSlideParty);
-
 // Функция для показа предыдущего слайда
 function showPreviousSlideParty() {
-  slideIndexParty = (slideIndexParty - 1 + slideCountParty) % slideCountParty;
-  transformSliderParty();
+  if (window.innerWidth < 1366) {
+    slideIndexParty = (slideIndexParty - 1 + slideCountParty) % slideCountParty;
+    mobileSliderParty();
+  } else {
+    slideIndexPartyGroup =
+      (slideIndexPartyGroup - 1 + slideCountPartyGroup) % slideCountPartyGroup;
+    desktopSliderParty();
+  }
 }
 
 // Функция для показа следующего слайда
 function showNextSlideParty() {
-  slideIndexParty = (slideIndexParty + 1) % slideCountParty;
-  transformSliderParty();
+  if (window.innerWidth < 1366) {
+    slideIndexParty = (slideIndexParty + 1) % slideCountParty;
+    mobileSliderParty();
+  } else {
+    slideIndexPartyGroup = (slideIndexPartyGroup + 1) % slideCountPartyGroup;
+    desktopSliderParty();
+  }
 }
 
 // Функция для обновления отображения слайдера
 function mobileSliderParty() {
+  slidesPartyGroup.forEach((slide) => {
+    slide.style.display = "block";
+  });
   slidesParty.forEach((slide, index) => {
     if (index === slideIndexParty) {
       slide.style.display = "block";
@@ -108,32 +112,54 @@ function mobileSliderParty() {
   });
 }
 
-//Выключаем функционал слайдера
+//---СЛАЙДЕР С УЧАСТНИКАМИ ДЕСКТОПНЫЙ---
+// Получаем элементы слайдера
+const sliderPartyGroup = document.querySelector(".slider-party");
+const slidesPartyGroup = Array.from(
+  sliderPartyGroup.querySelectorAll(".slider-party__slide-group")
+);
+const slideCountPartyGroup = slidesPartyGroup.length;
+let slideIndexPartyGroup = 0;
+
+// Функция для обновления отображения слайдера
 function desktopSliderParty() {
-  slidesPartyGroup.forEach((slideGroup, index) => {
+  slidesParty.forEach((slide) => {
+    slide.style.display = "block";
+  });
+  slidesPartyGroup.forEach((slide, index) => {
     if (index === slideIndexPartyGroup) {
-      slideGroup.style.display = "flex";
+      slide.style.display = "flex";
     } else {
-      slideGroup.style.display = "none";
+      slide.style.display = "none";
     }
   });
 }
 
-//Трансформация мобильного-десктопного слайдера
-function transformSliderParty() {
+//---ИНИЦИАЛИЗАЦИЯ И ПЕРЕРИСОВКА СЛАЙДЕРА УЧАСТНИКОВ---
+//Перепроверка размера окна
+window.addEventListener("resize", (e) => {
+  togglePartySlider();
+});
+
+//Инициализация слайдеров участников
+prevButtonParty.addEventListener("click", showPreviousSlideParty);
+nextButtonParty.addEventListener("click", showNextSlideParty);
+if (window.innerWidth < 1366) {
+  mobileSliderParty();
+} else {
+  desktopSliderParty();
+}
+
+//автопромотка карусели с участниками
+setInterval(() => {
+  showNextSlideParty();
+}, 4000);
+
+//Выбор первоначального вида слайдера
+function togglePartySlider() {
   if (window.innerWidth < 1366) {
-    // Инициализация слайдера
     mobileSliderParty();
   } else {
-    // Выключение слайдера
     desktopSliderParty();
   }
 }
-
-//Выбор первоначального вида слайдера
-transformSliderParty();
-
-//Перепроверка размера окна
-window.addEventListener("resize", (e) => {
-  transformSliderParty();
-});
